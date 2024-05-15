@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
+    alias(libs.plugins.detekt)
 }
 
 group = properties("pluginGroup").get()
@@ -24,6 +25,7 @@ repositories {
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
 //    implementation(libs.annotations)
+//    implementation(kotlin("stdlib-jdk8"))
 }
 
 // Set the JVM language level used to build the project.
@@ -54,6 +56,13 @@ koverReport {
             onCheck = true
         }
     }
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    allRules = false
+    config.setFrom("$projectDir/config/detekt/detekt.yml")
+    autoCorrect = true
 }
 
 tasks {
