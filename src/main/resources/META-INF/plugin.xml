@@ -1,16 +1,23 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.naoyukik.intellijplugincopyprettygitlog</id>
-    <name>intellij-plugin-copy-pretty-git-log</name>
+    <name>Copy Pretty Git Log</name>
     <vendor>naoyukik</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.naoyukik.intellijplugincopyprettygitlog.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
+
+    <actions>
+        <action class="CopyGitLogAction" id="com.github.naoyukik.intellijplugincopyprettygitlog.CopyGitLogAction" text="CopyGitLogAction">
+            <add-to-group group-id="Git.Log.ContextMenu" anchor="last" />
+        </action>
+    </actions>
 
     <applicationListeners>
         <listener class="com.github.naoyukik.intellijplugincopyprettygitlog.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
