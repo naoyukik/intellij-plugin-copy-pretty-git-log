@@ -1,7 +1,7 @@
 package com.github.naoyukik.intellijplugincopyprettygitlog.settings
 
 import com.intellij.ui.components.JBLabel
-import com.intellij.ui.components.JBTextArea
+import com.intellij.ui.components.JBTextField
 import com.intellij.util.ui.FormBuilder
 import javax.swing.JCheckBox
 import javax.swing.JComponent
@@ -12,13 +12,12 @@ import javax.swing.JPanel
  */
 class AppSettingsComponent {
     companion object {
-        private const val TEXT_AREA_ROWS = 1
         private const val TEXT_AREA_COLUMNS = 30
     }
 
     private var mainPanel: JPanel? = null
-    private val customizedPatterns = JBTextArea(TEXT_AREA_ROWS, TEXT_AREA_COLUMNS)
-    private val customizedTimeFormat = JBTextArea(TEXT_AREA_ROWS, TEXT_AREA_COLUMNS)
+    private val customizedPatterns = JBTextField(TEXT_AREA_COLUMNS)
+    private val customizedTimeFormat = JBTextField(TEXT_AREA_COLUMNS)
     private val checkBoxReverse = JCheckBox()
 
     init {
@@ -30,7 +29,12 @@ class AppSettingsComponent {
                 )
             )
             .addLabeledComponent(JBLabel("Reverse: "), checkBoxReverse)
-            .addLabeledComponent(JBLabel("Time format"), customizedTimeFormat)
+            .addLabeledComponent(JBLabel("Time format: "), customizedTimeFormat)
+            .addComponent(
+                JBLabel(
+                    "For time formatting, you can use Java's DateTimeFormatter.ofPattern setting."
+                )
+            )
             .addComponentFillVertically(JPanel(), 0)
             .panel
     }

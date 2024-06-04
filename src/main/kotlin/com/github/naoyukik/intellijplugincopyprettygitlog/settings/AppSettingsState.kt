@@ -13,9 +13,9 @@ class AppSettingsState : PersistentStateComponent<AppSettingsState.State> {
     val myState = State()
 
     class State {
-        var customPattern1 = ""
+        var customPattern1 = "- {SUBJECT} {COMMIT_TIME}"
         var reversed = false
-        var customTimeFormat = ""
+        var customTimeFormat = "yyyy-MM-dd HH:mm:ss"
     }
 
     companion object {

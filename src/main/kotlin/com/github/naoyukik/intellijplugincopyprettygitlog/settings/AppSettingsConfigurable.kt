@@ -39,8 +39,8 @@ class AppSettingsConfigurable(project: Project) : Configurable {
 
     override fun apply() {
         mySettingsState?.myState?.customPattern1 = mySettingsComponent!!.getCustomizedPatterns()
-        mySettingsState?.myState?.reversed = mySettingsComponent!!.getReversed() ?: false
-        mySettingsState?.myState?.customTimeFormat = mySettingsComponent!!.getCustomizedTimeFormat() ?: ""
+        mySettingsState?.myState?.reversed = mySettingsComponent!!.getReversed()
+        mySettingsState?.myState?.customTimeFormat = mySettingsComponent!!.getCustomizedTimeFormat()
     }
 
     override fun reset() {

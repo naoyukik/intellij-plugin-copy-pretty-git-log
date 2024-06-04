@@ -1,8 +1,8 @@
 package com.github.naoyukik.intellijplugincopyprettygitlog.domain
 
+import com.github.naoyukik.intellijplugincopyprettygitlog.settings.AppSettingsState
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.editor.Editor
-import com.github.naoyukik.intellijplugincopyprettygitlog.settings.AppSettingsState
 
 class SettingState {
     fun getAppSettingsState(editor: Editor): AppSettingsState? {
