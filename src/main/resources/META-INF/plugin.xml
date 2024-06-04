@@ -7,19 +7,19 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>Git4Idea</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.naoyukik.intellijplugincopyprettygitlog.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <projectConfigurable
+            displayName="Copy Pretty Git Log"
+            groupId="editor"
+            instance="com.github.naoyukik.intellijplugincopyprettygitlog.settings.AppSettingsConfigurable"
+            id="preference.CopyPrettyGitLogConfigurable"/>
+        <projectService
+            serviceImplementation="com.github.naoyukik.intellijplugincopyprettygitlog.settings.AppSettingsState"/>
     </extensions>
 
     <actions>
-        <action class="CopyGitLogAction" id="com.github.naoyukik.intellijplugincopyprettygitlog.CopyGitLogAction" text="CopyGitLogAction">
+        <action class="com.github.naoyukik.intellijplugincopyprettygitlog.presentation.CopyPrettyGitLogAction" id="com.github.naoyukik.intellijplugincopyprettygitlog.CopyGitLogAction" text="CopyGitLogAction">
             <add-to-group group-id="Git.Log.ContextMenu" anchor="last" />
         </action>
     </actions>
-
-    <applicationListeners>
-        <listener class="com.github.naoyukik.intellijplugincopyprettygitlog.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
