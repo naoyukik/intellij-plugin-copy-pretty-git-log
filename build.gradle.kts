@@ -24,7 +24,7 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.5")
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.6")
 }
 
 // Set the JVM language level used to build the project.
