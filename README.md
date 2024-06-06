@@ -1,28 +1,57 @@
 # intellij-plugin-copy-pretty-git-log
 
 ![Build](https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `PLUGIN_ID` in the above README badges.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/com.github.naoyukik.copyprettygitlog)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.naoyukik.copyprettygitlog.svg)](https://plugins.jetbrains.com/plugin/com.github.naoyukik.copyprettygitlog)
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+This plugin allows you to easily copy Git commit histories in a formatted text to your clipboard.
 <!-- Plugin description end -->
+
+## Installation
+
+1. Open IntelliJ IDEA.
+2. Open the 'File' menu, then select 'Settings'.
+3. From the left-side menu, select 'Plugins'.
+4. In the 'Marketplace' tab, search for 'Copy Pretty Git Log'.
+5. Click 'Install' to start the plugin installation.
+6. Once installation is complete, restart IDEA.
+
+## Usage
+
+1. Select commits in your VCS log.
+2. Right-click and select 'Copy Pretty Git Log'.
+3. The formatted log is copied to your clipboard.
+
+## Configuration
+
+- **Custom Pattern**: Allows you to define the format of your log strings. You can use placeholders such as `{AUTHOR_NAME}`, `{COMMITER_NAME}`, `{COMMIT_TIME}`, `{FULL_MESSAGE}`, and `{SUBJECT}`.
+- **Reverse**: Enabling this will output your log entries in reverse order.
+- **Custom Time Format**: Allows setting a custom date and time format. Default is `yyyy-MM-dd HH:mm:ss`.
+
+## 概要
+このプラグインは、Gitのコミット履歴を選択し、フォーマットしたテキストとしてクリップボードにコピーするのを簡単にします。
+
+## インストール
+
+1. IntelliJ IDEAを開きます。
+2. 「File」メニューを開き、その中から「Settings」を選択します。
+3. 左側のメニューから「Plugins」を選択します。
+4. 「Marketplace」タブを開き、「Copy Pretty Git Log」を検索します。
+5. 「Install」をクリックし、プラグインのインストールを開始します。
+6. インストールが完了したら、IDEAを再起動します。
+
+## 使い方
+
+1. VCSログのコミットを選択します。
+2. 右クリックメニューから、「Copy Pretty Git Log」を選択します。
+3. フォーマットされたログがクリップボードにコピーされます。
+
+## 設定
+
+- **カスタムパターン**: ログ文字列のフォーマットを定義できます。 `{AUTHOR_NAME}`、 `{COMMITER_NAME}`、 `{COMMIT_TIME}`、 `{FULL_MESSAGE}`、 および `{SUBJECT}` などのプレースホルダーを利用できます。
+- **リバース**: この設定を有効にすると、ログエントリは逆順で出力されます。
+- **カスタム時間フォーマット**: カスタム日時フォーマットを設定できます。デフォルトは `yyyy-MM-dd HH:mm:ss` です。
 
 ## Installation
 
