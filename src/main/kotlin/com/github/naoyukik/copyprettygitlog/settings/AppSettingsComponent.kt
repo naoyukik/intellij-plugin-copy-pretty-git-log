@@ -1,4 +1,4 @@
-package com.github.naoyukik.intellijplugincopyprettygitlog.settings
+package com.github.naoyukik.copyprettygitlog.settings
 
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBTextField

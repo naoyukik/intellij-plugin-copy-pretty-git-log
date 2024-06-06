@@ -1,6 +1,6 @@
-package com.github.naoyukik.intellijplugincopyprettygitlog.domain
+package com.github.naoyukik.copyprettygitlog.domain
 
-import com.github.naoyukik.intellijplugincopyprettygitlog.settings.AppSettingsState
+import com.github.naoyukik.copyprettygitlog.settings.AppSettingsState
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.editor.Editor
 
