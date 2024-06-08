@@ -21,7 +21,7 @@ class CopyPrettyGitLogAction : AnAction() {
         val vcsLog = e.getData(VcsLogDataKeys.VCS_LOG_COMMIT_SELECTION) ?: return
 
         val state = SettingState().getAppSettingsState(e)
-        val pattern = state?.myState?.customPattern1?.trim() ?: "- {SUBJECT}"
+        val pattern = state?.myState?.customPattern1?.trim() ?: "- {SUBJECT} {COMMIT_TIME}"
 
         ApplicationManager.getApplication().executeOnPooledThread {
             val selectedCommits = vcsLog.cachedMetadata
@@ -35,10 +35,9 @@ class CopyPrettyGitLogAction : AnAction() {
     }
 
     fun formatCommits(commits: List<VcsCommitMetadata>, pattern: String, state: AppSettingsState?): String {
-        val isReversed: Boolean = state?.myState?.reversed ?: false
         val timeFormat = state?.myState?.customTimeFormat ?: "yyyy-MM-dd HH:mm:ss"
 
-        return reversedList(commits, isReversed).map { commit ->
+        return commits.map { commit ->
             var result = pattern
             for (property in CommitProperty.entries) {
                 val replacement = when (property) {
