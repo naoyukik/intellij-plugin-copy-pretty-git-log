@@ -1,4 +1,4 @@
-package com.github.naoyukik.intellijplugincopyprettygitlog.domain.dto
+package com.github.naoyukik.copyprettygitlog.domain.dto
 
 enum class CommitProperty {
     AUTHOR_NAME,

@@ -1,8 +1,8 @@
-package com.github.naoyukik.intellijplugincopyprettygitlog.presentation
+package com.github.naoyukik.copyprettygitlog.presentation
 
-import com.github.naoyukik.intellijplugincopyprettygitlog.domain.SettingState
-import com.github.naoyukik.intellijplugincopyprettygitlog.domain.dto.CommitProperty
-import com.github.naoyukik.intellijplugincopyprettygitlog.settings.AppSettingsState
+import com.github.naoyukik.copyprettygitlog.domain.SettingState
+import com.github.naoyukik.copyprettygitlog.domain.dto.CommitProperty
+import com.github.naoyukik.copyprettygitlog.settings.AppSettingsState
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.application.ApplicationManager
