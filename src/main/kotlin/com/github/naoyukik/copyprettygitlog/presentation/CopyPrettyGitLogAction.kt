@@ -34,10 +34,10 @@ class CopyPrettyGitLogAction : AnAction() {
         }
     }
 
-    fun formatCommits(commits: List<VcsCommitMetadata>, pattern: String, state: AppSettingsState?): String {
+    private fun formatCommits(commits: List<VcsCommitMetadata>, pattern: String, state: AppSettingsState?): String {
         val timeFormat = state?.myState?.customTimeFormat ?: "yyyy-MM-dd HH:mm:ss"
 
-        return commits.map { commit ->
+        return commits.joinToString(separator = "\n") { commit ->
             var result = pattern
             for (property in CommitProperty.entries) {
                 val replacement = when (property) {
@@ -50,7 +50,7 @@ class CopyPrettyGitLogAction : AnAction() {
                 result = result.replace(property.placeholder, replacement)
             }
             result
-        }.joinToString(separator = "\n")
+        }
     }
 
     private fun reversedList(list: List<VcsCommitMetadata>, isReversed: Boolean): List<VcsCommitMetadata> {
