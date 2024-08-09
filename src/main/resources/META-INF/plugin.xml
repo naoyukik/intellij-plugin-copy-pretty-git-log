@@ -10,7 +10,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <projectConfigurable
             displayName="Copy Pretty Git Log"
-            groupId="editor"
+            groupId="tools"
             instance="com.github.naoyukik.copyprettygitlog.settings.AppSettingsConfigurable"
             id="preference.CopyPrettyGitLogConfigurable"/>
         <projectService
@@ -18,7 +18,7 @@
     </extensions>
 
     <actions>
-        <action class="com.github.naoyukik.copyprettygitlog.presentation.CopyPrettyGitLogAction" id="com.github.naoyukik.copyprettygitlog.CopyGitLogAction" text="CopyGitLogAction">
+        <action class="com.github.naoyukik.copyprettygitlog.presentation.CopyPrettyGitLogAction" id="com.github.naoyukik.copyprettygitlog.CopyGitLogAction" text="Copy Pretty Git Log">
             <add-to-group group-id="Git.Log.ContextMenu" anchor="last" />
         </action>
     </actions>
