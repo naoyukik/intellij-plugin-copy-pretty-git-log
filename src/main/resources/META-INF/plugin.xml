@@ -13,8 +13,6 @@
             groupId="tools"
             instance="com.github.naoyukik.copyprettygitlog.settings.AppSettingsConfigurable"
             id="preference.CopyPrettyGitLogConfigurable"/>
-        <projectService
-            serviceImplementation="com.github.naoyukik.copyprettygitlog.settings.AppSettingsState"/>
     </extensions>
 
     <actions>

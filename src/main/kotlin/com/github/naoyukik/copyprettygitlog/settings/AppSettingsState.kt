@@ -1,10 +1,12 @@
 package com.github.naoyukik.copyprettygitlog.settings
 
 import com.intellij.openapi.components.PersistentStateComponent
+import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
 import com.intellij.openapi.project.Project
 
+@Service(Service.Level.PROJECT)
 @State(
     name = "CopyPrettyGitLogState",
     storages = [Storage("CopyPrettyGitLogState.xml")]
