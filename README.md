@@ -1,7 +1,7 @@
 # intellij-plugin-copy-pretty-git-log
 
 ![Build](https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/com.github.naoyukik.copyprettygitlog)
+[![Version](https://img.shields.io/jetbrains/plugin/v/com.github.naoyukik.copyprettygitlog.svg)](https://plugins.jetbrains.com/plugin/24589-copy-pretty-git-log)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.naoyukik.copyprettygitlog.svg)](https://plugins.jetbrains.com/plugin/com.github.naoyukik.copyprettygitlog)
 
 <!-- Plugin description -->
@@ -52,19 +52,6 @@ This plugin allows you to easily copy Git commit histories in a formatted text t
 - **カスタムパターン**: ログ文字列のフォーマットを定義できます。 `{AUTHOR_NAME}`、 `{COMMITER_NAME}`、 `{COMMIT_TIME}`、 `{FULL_MESSAGE}`、 および `{SUBJECT}` などのプレースホルダーを利用できます。
 - **リバース**: この設定を有効にすると、ログエントリは逆順で出力されます。
 - **カスタム時間フォーマット**: カスタム日時フォーマットを設定できます。デフォルトは `yyyy-MM-dd HH:mm:ss` です。
-
-## Installation
-
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-plugin-copy-pretty-git-log"</kbd> >
-  <kbd>Install</kbd>
-  
-- Manually:
-
-  Download the [latest release](https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
