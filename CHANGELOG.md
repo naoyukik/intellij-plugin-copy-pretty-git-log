@@ -8,6 +8,10 @@
 
 - Supported in IntelliJ 2025
 
+### chore
+
+- Gradle IntelliJ Plugin to v2
+
 ## [1.0.2] - 2024-09-26
 
 - build: support for IDEA 2024.3 by @naoyukik in https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/pull/51
