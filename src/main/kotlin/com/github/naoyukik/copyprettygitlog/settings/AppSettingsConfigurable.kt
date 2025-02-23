@@ -2,54 +2,65 @@ package com.github.naoyukik.copyprettygitlog.settings
 
 import com.intellij.openapi.options.Configurable
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.ui.DialogPanel
+import com.intellij.ui.dsl.builder.COLUMNS_MEDIUM
+import com.intellij.ui.dsl.builder.bindSelected
+import com.intellij.ui.dsl.builder.bindText
+import com.intellij.ui.dsl.builder.columns
+import com.intellij.ui.dsl.builder.panel
 import org.jetbrains.annotations.Nls
-import javax.swing.JComponent
 
 /**
  * Provides controller functionality for application settings.
  */
-class AppSettingsConfigurable(project: Project) : Configurable {
-    private var mySettingsComponent: AppSettingsComponent? = null
-    private var mySettingsState: AppSettingsState? = null
+class AppSettingsConfigurable(private val project: Project) : Configurable {
+    private val mySettingsState
+        get() = AppSettingsState.getInstance(project)
 
-    init {
-        mySettingsComponent = AppSettingsComponent()
-        mySettingsState = AppSettingsState.getInstance(project)
-    }
+    private val mainPanel: DialogPanel by lazy { createUIComponents() }
 
     @Nls(capitalization = Nls.Capitalization.Title)
     override fun getDisplayName(): String {
-        return "Customize Word Separators"
+        return "Copy Pretty Git Log"
     }
 
-    override fun getPreferredFocusedComponent(): JComponent? {
-        return mySettingsComponent?.getPreferredFocusedComponent()
-    }
-
-    override fun createComponent(): JComponent? {
-        mySettingsComponent = AppSettingsComponent()
-        return mySettingsComponent?.getPanel()
+    override fun createComponent(): DialogPanel {
+        return mainPanel
     }
 
     override fun isModified(): Boolean {
-        return mySettingsComponent?.getCustomizedPatterns() != mySettingsState?.myState?.customPattern1 ||
-            mySettingsComponent?.getCustomizedTimeFormat() != mySettingsState?.myState?.customTimeFormat ||
-            mySettingsComponent?.getReversed() != mySettingsState?.myState?.reversed
-    }
-
-    override fun apply() {
-        mySettingsState?.myState?.customPattern1 = mySettingsComponent!!.getCustomizedPatterns()
-        mySettingsState?.myState?.reversed = mySettingsComponent!!.getReversed()
-        mySettingsState?.myState?.customTimeFormat = mySettingsComponent!!.getCustomizedTimeFormat()
+        return mainPanel.isModified()
     }
 
     override fun reset() {
-        mySettingsComponent?.setCustomizedPatterns(mySettingsState?.myState?.customPattern1)
-        mySettingsComponent?.setReversed(mySettingsState?.myState?.reversed ?: false)
-        mySettingsComponent?.setCustomizedTimeFormat(mySettingsState?.myState?.customTimeFormat ?: "")
+        mainPanel.reset()
     }
 
-    override fun disposeUIResources() {
-        mySettingsComponent = null
+    override fun apply() {
+        mainPanel.apply()
+    }
+
+    private fun createUIComponents(): DialogPanel {
+        return panel {
+            row("Format:") {
+                textField()
+                    .bindText(mySettingsState::customPattern1)
+                    .columns(COLUMNS_MEDIUM)
+                    .comment(
+                        "Available placeholders:" +
+                            "{AUTHOR_NAME}, {COMMITER_NAME}, {COMMIT_TIME}, {FULL_MESSAGE}, {SUBJECT}"
+                    )
+            }
+            row("Time format:") {
+                textField()
+                    .bindText(mySettingsState::customTimeFormat)
+                    .columns(COLUMNS_MEDIUM)
+                    .comment("For time formatting, you can use Java's DateTimeFormatter.ofPattern setting.")
+            }
+            row {
+                checkBox("Reverse order the copied listings")
+                    .bindSelected(mySettingsState::reversed)
+            }
+        }
     }
 }

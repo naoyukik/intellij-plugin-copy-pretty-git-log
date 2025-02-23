@@ -14,6 +14,24 @@ import com.intellij.openapi.project.Project
 class AppSettingsState : PersistentStateComponent<AppSettingsState.State> {
     val myState = State()
 
+    var customPattern1
+        get() = myState.customPattern1
+        set(value) {
+            myState.customPattern1 = value
+        }
+
+    var reversed
+        get() = myState.reversed
+        set(value) {
+            myState.reversed = value
+        }
+
+    var customTimeFormat
+        get() = myState.customTimeFormat
+        set(value) {
+            myState.customTimeFormat = value
+        }
+
     class State {
         var customPattern1 = "- {SUBJECT} {COMMIT_TIME}"
         var reversed = false
@@ -22,7 +40,7 @@ class AppSettingsState : PersistentStateComponent<AppSettingsState.State> {
 
     companion object {
         @JvmStatic
-        fun getInstance(project: Project): AppSettingsState? {
+        fun getInstance(project: Project): AppSettingsState {
             return project.getService(AppSettingsState::class.java)
         }
     }
