@@ -25,7 +25,7 @@ class CopyPrettyGitLogAction : AnAction() {
 
         ApplicationManager.getApplication().executeOnPooledThread {
             val selectedCommits = vcsLog.cachedMetadata
-            val isReversed: Boolean = state?.myState?.reversed ?: false
+            val isReversed: Boolean = state?.myState?.reversed == true
             val updatedCommits = reversedList(selectedCommits, isReversed)
             val formattedLog: String = formatCommits(updatedCommits, pattern, state)
             ApplicationManager.getApplication().invokeLater {

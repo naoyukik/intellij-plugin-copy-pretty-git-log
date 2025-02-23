@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Rebuild the settings screen
+
 ## [1.0.3] - 2025-01-20
 
 ### Changed
