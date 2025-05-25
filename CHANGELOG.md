@@ -4,11 +4,16 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Supported in IntelliJ 2025.2
+
 ## [1.0.4] - 2025-02-23
 
 ### Changed
 
 - Rebuild the settings screen
+- Supported in IntelliJ 2025.2
 
 ## [1.0.3] - 2025-01-20
 
