@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [1.0.7] - 2026-03-25
+
 ### Changed
 
 - Supported in IntelliJ 2026.1
@@ -51,7 +53,8 @@
 
 - Released
 
-[Unreleased]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.6...HEAD
+[Unreleased]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.7...HEAD
+[1.0.7]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.3...v1.0.4
