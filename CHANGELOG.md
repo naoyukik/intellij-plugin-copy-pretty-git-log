@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [1.0.8] - 2026-05-31
+
 ### Changed
 
 - Supported in IntelliJ 2026.2
@@ -57,12 +59,13 @@
 
 - Released
 
-[Unreleased]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.7...HEAD
-[1.0.7]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.6...v1.0.7
-[1.0.6]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.5...v1.0.6
-[1.0.5]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.4...v1.0.5
-[1.0.4]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.3...v1.0.4
-[1.0.3]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.2...v1.0.3
-[1.0.2]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/commits/v1.0.0
+[Unreleased]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.8...HEAD
+[1.0.8]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.7...1.0.8
+[1.0.7]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.6...1.0.7
+[1.0.6]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.5...1.0.6
+[1.0.5]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.4...1.0.5
+[1.0.4]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.3...1.0.4
+[1.0.3]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.2...1.0.3
+[1.0.2]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/commits/1.0.0
