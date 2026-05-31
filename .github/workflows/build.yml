@@ -127,6 +127,9 @@ jobs:
       # Setup Gradle
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
+        with:
+          cache-disabled: true
+          cache-read-only: true
 
       # Run tests
       - name: Run Tests

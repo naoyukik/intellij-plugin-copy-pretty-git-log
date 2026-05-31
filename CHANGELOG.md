@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Supported in IntelliJ 2026.2
+
 ## [1.0.7] - 2026-03-25
 
 ### Changed
