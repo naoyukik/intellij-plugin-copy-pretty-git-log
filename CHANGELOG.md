@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Remove the upper limit on supported versions
+
 ## [1.0.8] - 2026-05-31
 
 ### Changed
