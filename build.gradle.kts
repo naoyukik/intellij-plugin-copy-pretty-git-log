@@ -1,5 +1,6 @@
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 
 plugins {
@@ -42,6 +43,9 @@ dependencies {
         // Plugin Dependencies.
         // Uses `platformBundledPlugins` property from the gradle.properties file for bundled IntelliJ Platform plugins.
         bundledPlugins(providers.gradleProperty("platformBundledPlugins").map { it.split(',') })
+
+        bundledModule("intellij.platform.vcs.log")
+        bundledModule("intellij.platform.vcs.log.graph")
 
         // Plugin Dependencies.
         // Uses `platformPlugins` property from the gradle.properties file for plugin from JetBrains Marketplace.
@@ -86,7 +90,6 @@ intellijPlatform {
 
         ideaVersion {
             sinceBuild = providers.gradleProperty("pluginSinceBuild")
-            untilBuild = providers.gradleProperty("pluginUntilBuild")
         }
     }
 
@@ -109,7 +112,15 @@ intellijPlatform {
 
     pluginVerification {
         ides {
-            recommended()
+            val platformType = IntelliJPlatformType.IntellijIdeaUltimate
+            create(
+                type = platformType,
+                version = providers.gradleProperty("verifierVersionSince")
+            )
+            create(
+                type = platformType,
+                version = providers.gradleProperty("verifierVersionUntil")
+            )
         }
     }
 }
