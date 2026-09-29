@@ -3,7 +3,7 @@
 detekt-formatting = "1.23.8"
 
 # plugins
-changelog = "2.4.0"
+changelog = "2.5.0"
 intelliJPlatform = "2.16.0"
 kotlin = "2.3.21"
 kover = "0.9.1"
