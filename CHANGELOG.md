@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [1.0.9] - 2026-09-30
+
 ### Changed
 
 - Remove the upper limit on supported versions
@@ -63,7 +65,8 @@
 
 - Released
 
-[Unreleased]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.8...HEAD
+[Unreleased]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.9...HEAD
+[1.0.9]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.8...1.0.9
 [1.0.8]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.7...1.0.8
 [1.0.7]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.6...1.0.7
 [1.0.6]: https://github.com/naoyukik/intellij-plugin-copy-pretty-git-log/compare/1.0.5...1.0.6
